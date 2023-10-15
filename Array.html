@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: grey; color: white;">
+    
+</body>
+<script>
+    //total number in array
+
+    let arr = ["1", "2", "3", "4", "5"]
+
+    //console.log(arr.length)
+
+    //even count 
+    let totalNum = ["1", "2", "3", "4", "5", "10", "11", "4"]
+    let evenCount = []; 
+    let oddCount = [];
+   for (let i = 0; i < totalNum.length; i++) {
+        let number = parseInt(totalNum[i]);
+  
+        if (!isNaN(number) && number %2 === 0 ) {
+            evenCount.push(number);
+        }
+        else {
+            oddCount.push(number);
+        }
+}
+console.log("total Count = "+ totalNum.length);
+console.log("evenCount = "+evenCount.join(","));
+console.log("oddCount = "+oddCount.join(","));
+
+
+</script>
+</html>
