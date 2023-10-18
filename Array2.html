@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: grey; color: white">
+  
+    <div>
+      <label for="">Number :</label>
+      <input type="text" name="" id="digit">
+      <button type="submit" onclick="calculate">Calculte</button>
+    </div>
+    <div>
+      <p id="result"></p>
+    </div>
+
+  </body>
+  <script>
+    //print 1, 4, 9, 16.......10000;
+
+    for (let i = 1; i <= 100; i++) {
+      // console.log(i*i)
+    }
+
+    //1, 8, 27, 64.....1000000;
+
+    for (let i = 1; i <= 100; i++) {
+      let result = i * i * i;
+      //console.log(result);
+    }
+
+    //fibonacci series
+
+    function generateFibonacci(num) {
+      let fib = [0, 1];
+
+      while (fib[fib.length - 1] + fib[fib.length - 2] <= num) {
+        fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+      }
+
+      return fib;
+    }
+
+    const fibonacciSequence = generateFibonacci(500);
+
+    //console.log(fibonacciSequence.join(", "));
+
+    //digit Count
+
+    function calculate() {
+      const num = parseInt(document.getElementById("calculate").value);
+      const result = document.getElementById(result);
+      count = 0;
+
+      while (num>0) {
+        num = parseInt(num/10);
+        count = count+1;
+      }
+      result.textContent = `your number is ${num} and digit is ${count}`;
+    }
+
+   
+  </script>
+</html>
